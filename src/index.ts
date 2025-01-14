@@ -1,9 +1,11 @@
-import express, {json} from 'express';
+import express, {json, urlencoded} from 'express';
 import productsRoutes from './routes/products/index';
+import authRoutes from './routes/auth/index.js';
 
 const port = 3000;
 
 const app = express();
+app.use(urlencoded({extended: false}));
 app.use(json());
 
 app.get('/',(req, res) =>{
@@ -14,6 +16,7 @@ app.get('/',(req, res) =>{
 
 
 app.use('/products', productsRoutes);
+app.use('/auth', authRoutes);
 
 
 app.listen(port,()=>{

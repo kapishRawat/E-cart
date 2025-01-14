@@ -1,0 +1,13 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1736868749534,
+      "tag": "0000_even_marvel_zombies",
+      "breakpoints": true
+    }
+  ]
+}
